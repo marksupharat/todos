@@ -19,7 +19,7 @@
               <div class="form-group">
                 <center><input type="text" class="form-control" id="new" placeholder="What needs to be done?" ng-model="title"></center>
               </div>
-                <center><button type="button" class="btn btn-default" ng-click="save()">Add</button></center>
+                <center><button type="button" class="btn btn-default" ng-click="add()">Add</button></center>
             </form>
           </div>
       </br>
@@ -34,7 +34,8 @@
               </tr>
             </thead>
             <tbody>
-              <td><input type="checkbox" ng-model="contact.done" ng-true-value="'complete'" ng-false-value=""></td>
+              <tr ng-repeat="todo in todos">
+              <td><input type="checkbox" ng-model="todo.done" ng-true-value="'complete'" ng-false-value=""></td>
               <td>{{todo.title}}</td>
               <td>{{todo.done}}</td>
             </tr>
@@ -47,7 +48,7 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/angular/angular.js" charset="utf-8"></script>
-    <script src="app.js"></script>
+    <script src="apptodo.js"></script>
 
   </body>
 </html>
